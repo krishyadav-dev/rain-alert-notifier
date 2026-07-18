@@ -7,8 +7,8 @@ account_sid = os.environ.get("ACCOUNT_SID")
 auth_token = os.environ.get("AUTH_TOKEN")
 
 weather_params = {
-    "lat" : 18.455898267850273,
-    "lon" : 73.84747593637942,
+    "lat" : 18.453875776701437,
+    "lon" : 73.85102174418083,
     "appid" : api_key,
     "cnt" : 4
 }
@@ -23,7 +23,7 @@ for hour_data in weather_data["list"]:
         message = client.messages.create(
             body = "It's going to rain today. Remember to keep an umbrella ☔, Love You",
             from_ = '+13194036010',
-            to = '+918482800151'
+            to = os.environ.get("RECEIEVER_MOBILE_NUMBER")
         )
         print("Bring an umbrella!")
         break
