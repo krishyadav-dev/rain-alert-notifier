@@ -1,4 +1,5 @@
-import requests, os
+import requests
+import os
 from twilio.rest import Client
 
 OWM_endpoint = "https://api.openweathermap.org/data/2.5/forecast"
